@@ -43,7 +43,8 @@ public class AdditionTest {
         WebDriver driver = new ChromeDriver();
 
         try {
-            driver.get("file:///S:/addition-webapp/src/main/webapp/index.html");
+            String filePath = "file:///" + System.getProperty("user.dir") + "/src/main/webapp/index.html";
+            driver.get(filePath);
 
             WebElement num1Field = driver.findElement(By.id("num1"));
             WebElement num2Field = driver.findElement(By.id("num2"));
